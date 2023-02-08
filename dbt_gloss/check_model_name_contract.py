@@ -23,6 +23,7 @@ def check_model_name_contract(
 
     for model in models:
         model_name = model.filename
+        print(f"{model_name} -- {pattern}.")
         if re.match(pattern, model_name) is None:
             status_code = 1
             print(f"{model_name}: model does not match regex pattern {pattern}.")
