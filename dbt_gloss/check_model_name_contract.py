@@ -20,6 +20,7 @@ def check_model_name_contract(
     sqls = get_filenames(paths, [".sql"])
     filenames = set(sqls.keys())
     models = get_models(catalog, filenames)
+    print(f"Hi --- {models} -- {pattern}.")
 
     for model in models:
         model_name = model.filename
